@@ -1,5 +1,11 @@
 # QMS Finishing Module - Mobile App (Android)
 
+**Short Description:**  
+Android mobile app for performing **fabric roll inspections** in the finishing stage, allowing workers to record inspection results, add roll details, and print final inspection stickers.
+
+---
+
+## Overview
 This repository contains the **Android mobile application** for the **QMS (Quality Management System) Finishing Module**.  
 It is used by production floor workers to perform **fabric roll inspections** and record inspection results directly from the shop floor.
 
@@ -15,5 +21,12 @@ It is used by production floor workers to perform **fabric roll inspections** an
 
 ---
 
-## Purpose
-This mobile app enables efficient and accurate recording of fabric inspection results in real time, reducing paperwork, minimizing errors, and ensuring smooth integration with the overall QMS system.
+## Workflow
+```mermaid
+flowchart TD
+    A[Fetch Batch & Roll Data from SQ Planning Software] --> B[Optional: Add Extra Rolls]
+    B --> C[Add Roll Weight & GSM]
+    C --> D[Perform 4-Point Fabric Inspection]
+    D --> E[Determine Pass/Fail Result]
+    E --> F[Print Final Inspection Sticker]
+
